@@ -2,5 +2,5 @@
 
 interface Tariff{
 
-    public function display();
+    public function getResults();
 }

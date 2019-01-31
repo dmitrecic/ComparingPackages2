@@ -19,15 +19,9 @@ class CompareTariffs implements Tariff
         return $this;
     }
 
-    public function display()
+    public function getResults()
     {
-        $results = json_decode($this->results);
-
-        echo "<ul>";
-        foreach ($results as $result) {
-            echo "<li>".$result->name . " (".$this->consumption." ".$this->meta->unit.") = " . $result->price . " " . $result->calculation . "</li>";
-        }
-        echo "</ul>";
+        return $this->results;
     }
 
     private function sortResults()
